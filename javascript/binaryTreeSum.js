@@ -1,4 +1,4 @@
-const xyz = (root, targetSum) => {
+const binaryTreeSum = (root, targetSum) => {
     var getSum = (root, targetSum) =>{
         if(!root){
             return 0
