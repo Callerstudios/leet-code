@@ -28,3 +28,9 @@ var detectCapitalUse = function (word) {
       word[0] === word[0].toUpperCase())
   );
 };
+
+var detectCapitalUse = function (word) {
+  return (
+    word == word[0] + word.substr(1).toLowerCase() || word == word.toUpperCase()
+  );
+};
