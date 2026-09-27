@@ -1,0 +1,12 @@
+var isSymmetric = function(root) {
+    if(!root.left && !root.right) return true
+    if(!root.left || !root.right) return false
+    return isSameTree(root.left, root.right)
+};
+
+const isSameTree = (p, q) =>{
+    if(!p && !q) return true
+    if(!p || !q) return false
+
+    return(p.val === q.val && isSameTree(p.left, q.right) && isSameTree(p.right, q.left))
+}
