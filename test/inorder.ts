@@ -14,6 +14,26 @@ function inOrder(node: CustomNode | null) {
   inOrder(node.right);
 }
 
+function preOrder(node: CustomNode | null) {
+  if (node === null) {
+    return;
+  }
+
+  console.log(node.value);
+  preOrder(node.left);
+  preOrder(node.right);
+}
+
+function postOrder(node : CustomNode | null) {
+  if (node === null) {
+    return;
+  }
+
+  postOrder(node.left);
+  postOrder(node.right);
+  console.log(node.value);
+}
+
 const root: CustomNode = {
   value: 4,
   left: {
@@ -45,3 +65,5 @@ const root: CustomNode = {
 };
 
 inOrder(root);
+console.log("\n\n")
+preOrder(root)
