@@ -33,6 +33,9 @@ function postOrder(node : CustomNode | null) {
   postOrder(node.right);
   console.log(node.value);
 }
+function test(v: never): never{
+  return v
+}
 
 const root: CustomNode = {
   value: 4,
